@@ -1,113 +1,148 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naveen Dairy Farm - Organic Milk</title>
+    <title>Naveen Dairy Farm</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+        body { font-family: 'Poppins', sans-serif; background: #e8f5e9; margin: 0; padding: 0; }
 
-        /* Style for the poster container */
+        /* Poster Styles */
         .poster {
-            max-width: 800px;
+            max-width: 850px;
             margin: 50px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for better background visibility */
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            background-image: url ('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-milk-poster-banner-image_194039.jpg')  ;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-milk-poster-banner-image_194039.jpg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            color: white;
         }
 
-        /* Style for the heading */
-        h1 {
+        .poster::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .poster-content {
+            position: relative;
+            z-index: 2;
             color: #fff;
-            font-size: 36px;
-            margin-bottom: 10px;
         }
 
-        /* Style for the tagline */
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
         .organic-tag {
-            font-size: 28px;
+            font-size: 24px;
+            color: #ffcc00;
+            margin-bottom: 30px;
             font-weight: bold;
-            color: #ffeb3b;
-            margin-bottom: 20px;
         }
 
-        /* Style for the milk types */
         .milk-types {
-            font-size: 20px;
+            font-size: 22px;
+            color: #fff;
             margin: 20px 0;
         }
 
-        /* Style for the call-to-action button */
         .url-link {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 15px 30px;
-            background-color: #4caf50;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #4caf50, #388e3c);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 20px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
-        /* Add hover effect for the button */
         .url-link:hover {
-            background-color: #388e3c;
+            background: linear-gradient(135deg, #388e3c, #4caf50);
+            transform: scale(1.05);
         }
 
-        /* Style for the address */
         .address {
             font-size: 18px;
             margin-top: 20px;
-            color: black;
+            color: #ddd;
         }
 
-        /* Style for the footer */
         .footer {
             margin-top: 30px;
-            font-size: 16px;
-            color: black;
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        /* Swiper Styles */
+        .swiper {
+            width: 350px; /* Reduced width */
+            height: 200px; /* Reduced height */
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
         }
     </style>
 </head>
 <body>
 
+<!-- Poster Section -->
 <div class="poster">
-    <h1>Naveen Dairy Farm</h1>
-    <p class="organic-tag">Organic Milk - Fresh from Farm to Home</p>
-
-    <div class="milk-types">
-        <p><strong>Buffalo Milk</strong> | <strong>Cow Milk</strong></p>
-        <p>Pure and Organic, Direct from our farm to your family!</p>
-    </div>
-
-    <a class="url-link" href="https://is.gd/Naveen_Dairy_farm_Organic_Milk" target="_blank">
-        Visit us at Naveen Dairy Farm
-    </a>
-
-    <div class="address">
-        <p>#22/68, Balija Veedhi, Patha Kadapa, Kadapa, Andhra Pradesh</p>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 Naveen Dairy Farm. All rights reserved.</p>
+    <div class="poster-content">
+        <h1>Naveen Dairy Farm</h1>
+        <p class="organic-tag">Organic Milk - Fresh from Farm to Home</p>
+        <div class="milk-types">
+            <p><strong>Buffalo Milk</strong> | <strong>Cow Milk</strong></p>
+        </div>
+        <a class="url-link" href="https://is.gd/Naveen_Dairy_farm_Organic_Milk" target="_blank">Order Now</a>
+        <div class="address"><p>#22/68, Balija Veedhi, Patha Kadapa, Kadapa, Andhra Pradesh</p></div>
+        <div class="footer"><p>&copy; 2024 Naveen Dairy Farm</p></div>
     </div>
 </div>
+
+<!-- Swiper Section -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://i.postimg.cc/QNf8HC6T/IMG-20241020-195316.jpg" alt="Buffalo Milk"></div>
+        <div class="swiper-slide"><img src="https://i.postimg.cc/QNf8HC6T/IMG-20241020-195316.jpg" alt="Cow Milk"></div>
+        <div class="swiper-slide"><img src="https://i.postimg.cc/QNf8HC6T/IMG-20241020-195316.jpg" alt="Organic Farm"></div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        spaceBetween: 20,
+        autoplay: { delay: 2500 },
+        loop: true,
+        slidesPerView: 1
+    });
+</script>
 
 </body>
 </html>
